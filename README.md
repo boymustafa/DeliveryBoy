@@ -16,5 +16,5 @@ The MVVM pattern comprises of three core components, each having a distinct role
 * AppCompat, CardView, RecyclerView an DesignLibrary
 * Data binding
 * Retrofit 2
-* Google Map V2
+* Google Map V2<br/> 
   ps: in order to use google map API, you should use your own API key.
