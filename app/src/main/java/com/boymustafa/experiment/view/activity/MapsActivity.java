@@ -1,4 +1,4 @@
-package com.boymustafa.experiment;
+package com.boymustafa.experiment.view.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,6 +6,7 @@ import android.databinding.DataBindingUtil;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
+import com.boymustafa.experiment.R;
 import com.boymustafa.experiment.model.Delivers;
 import com.boymustafa.experiment.viewModel.MapViewModel;
 

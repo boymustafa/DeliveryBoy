@@ -1,11 +1,10 @@
-package com.boymustafa.experiment.view;
+package com.boymustafa.experiment.view.adapter;
 
 import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import com.boymustafa.experiment.R;
@@ -48,14 +47,12 @@ public class DeliverAdapter extends RecyclerView.Adapter<DeliverAdapter.DeliverA
         notifyDataSetChanged();
     }
 
-    public static class DeliverAdapterViewHolder extends RecyclerView.ViewHolder{
+    static class DeliverAdapterViewHolder extends RecyclerView.ViewHolder{
         ItemDeliverBinding mItemDeliverBinding;
-        private final String TAG = DeliverAdapterViewHolder.class.getSimpleName();
 
-       public DeliverAdapterViewHolder(ItemDeliverBinding itemDeliverBinding){
+       DeliverAdapterViewHolder(ItemDeliverBinding itemDeliverBinding){
            super(itemDeliverBinding.itemDeliver);
            this.mItemDeliverBinding = itemDeliverBinding;
-           Log.d(TAG,"masuk DeliverAdapterViewHolder");
        }
 
        void bindDeliver(Delivers delivers) {

@@ -6,7 +6,7 @@ import android.databinding.BindingAdapter;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.boymustafa.experiment.MapsActivity;
+import com.boymustafa.experiment.view.activity.MapsActivity;
 import com.boymustafa.experiment.model.Delivers;
 import com.boymustafa.experiment.model.Location;
 import com.bumptech.glide.Glide;
