@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<fragment xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:map="http://schemas.android.com/apk/res-auto"-->
+        <!--xmlns:tools="http://schemas.android.com/tools"-->
+        <!--android:id="@+id/map"-->
+        <!--android:name="com.google.android.gms.maps.SupportMapFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--tools:context=".MapsActivity" >-->
+
+    <!--</fragment>-->
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="mapViewModel"
+            type="com.boymustafa.experiment.viewModel.MapViewModel"/>
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:initMap="@{mapViewModel.mMapLatLng}" />
+
+
+        <android.support.v7.widget.CardView
+            app:cardElevation="5dp"
+            android:layout_margin="@dimen/spacing_huge"
+            android:id="@+id/item_deliver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="@dimen/spacing_large"
+            android:layout_alignParentBottom="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:orientation="vertical">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_people"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    tools:imageUrl="@{mapViewModel.getThumbnail}"/>
+
+                <TextView
+                    android:id="@+id/label_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:layout_alignTop="@+id/image_people"
+                    android:text="@{mapViewModel.getDescription}"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    tools:text="Descriptina"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+
+
+</layout>
+
+
+
